@@ -32,7 +32,13 @@ jobs:
           npm install archify
 
       - name: Generate Dashboard HTML
-        run: node render.js
+        run: |
+          node render.js
+          # 如果 render.js 沒有生成 index.html，確保複製一個備份
+          if [ ! -f index.html ]; then
+            echo "Warning: index.html not found, searching for generated html..."
+            find . -maxdepth 1 -name "*.html" -exec cp {} index.html \;
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
