@@ -1,0 +1,86 @@
+{
+  "title": "加拿大黃刀鎮極光與溫哥華行程流程",
+  "diagramType": "workflow",
+  "theme": "dark",
+  "nodes": [
+    {
+      "id": "hkg",
+      "label": "香港國際機場 (HKG T1)",
+      "type": "entry",
+      "details": { "city": "香港" }
+    },
+    {
+      "id": "icn",
+      "label": "仁川國際機場 (ICN T2)",
+      "type": "process",
+      "details": { "city": "首爾 (轉機)" }
+    },
+    {
+      "id": "yvr",
+      "label": "溫哥華國際機場 (YVR M)",
+      "type": "hub",
+      "details": { "city": "溫哥華" }
+    },
+    {
+      "id": "yyc",
+      "label": "卡爾加里飯店",
+      "type": "destination",
+      "details": { "address": "135 13 Avenue SW #1709" }
+    },
+    {
+      "id": "yeg",
+      "label": "埃德蒙頓國際機場 (YEG)",
+      "type": "process",
+      "details": { "city": "埃德蒙頓" }
+    },
+    {
+      "id": "yzf",
+      "label": "黃刀鎮機場 (YZF)",
+      "type": "destination",
+      "details": { "city": "耶洛奈夫 (極光行程)" }
+    },
+    {
+      "id": "tpe",
+      "label": "台灣桃園國際機場 (TPE T2)",
+      "type": "process",
+      "details": { "city": "台北 (轉機)" }
+    }
+  ],
+  "edges": [
+    {
+      "from": "hkg",
+      "to": "icn",
+      "label": "09/19 KE2012 (00:45-05:25)"
+    },
+    {
+      "from": "icn",
+      "to": "yvr",
+      "label": "09/19 KE075 (22:40-16:30)"
+    },
+    {
+      "from": "yvr",
+      "to": "yyc",
+      "label": "09/19 AC2072 + 09/20 接送"
+    },
+    {
+      "from": "yeg",
+      "to": "yzf",
+      "label": "09/28 5T244 (08:00-09:45)"
+    },
+    {
+      "from": "yzf",
+      "to": "yvr",
+      "label": "10/01 4N880 (19:15-20:50)"
+    },
+    {
+      "from": "yvr",
+      "to": "tpe",
+      "label": "10/03 BR009 (02:00-05:35+1)"
+    },
+    {
+      "from": "tpe",
+      "to": "hkg",
+      "label": "10/04 BR851 (08:15-10:05)"
+    }
+  ]
+}
